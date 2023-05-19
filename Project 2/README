@@ -1,0 +1,11 @@
+Programmed by Luke Schrezenmeier, Rich Bui, and Kinsey Vo
+
+This program uses the game algorithms from "Artificial Intelligence: A Modern Approach" to play the Game of Nim.
+Reference: https://github.com/aimacode/aima-python
+
+Video Example: https://www.youtube.com/watch?v=-aPDfqYrIcg
+
+RULES/HOW TO PLAY:
+1) Set up game board/field by creating rows of objects
+2) Players take turns taking any number of objects from one of the piles
+3) Game ends and a player loses when they take the last object on the board/field
