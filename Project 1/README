@@ -1,6 +1,6 @@
-# Programming project 1 - Wolf, Goat, and Cabbage problem
+Programming project 1 - Wolf, Goat, and Cabbage problem
 
-## Programmed by Luke Schrezenmeier and Kinsey Vo ##
+Programmed by Luke Schrezenmeier and Kinsey Vo ##
 
 This program uses search algorithms from "Artificial Intelligence: A Modern Approach" to solve the Wolf-Goat-Cabbage problem.
 
@@ -13,6 +13,6 @@ The goal state is to get the left side empty { } and the right side filled with 
 left side to right side, only the farmer and a single item can move at a time. However, certain items cannot be left together
 while the farmer is away. If the farmer is away, the wolf would eat the goat or the goat would eat the cabbage.
 
-## References ##
+References
   1. https://github.com/aimacode/aima-python
   2. https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem
