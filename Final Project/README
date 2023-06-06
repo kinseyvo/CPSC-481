@@ -1,3 +1,38 @@
+Final Project - Peg Game
+
 Programmed by Luke Schrezenmeier, Rich Bui, and Kinsey Vo
 
-Peg Game is played on a triangular board that contains 14 pegs and 15 holes.
+This program uses search algorithms from "Artificial Intelligence: A Modern Approach" to play the Peg Game.
+
+Problem:
+    Peg Game is most commonly played on a triangular board that contains 15 holes and 14 pegs. The 14 pegs can be
+    placed in any order on the board. The initial state would be 14 pegs placed into the holes, with one hole
+    remaining empty. The goal state is when only one peg is left remaining on the board, in any hole.
+
+Rules/How to Play:
+    You jump, horizontally or diagonally, and remove pieces. When a peg is jumped over, that peg is removed
+    from the game.
+
+Approach:
+    Pegs are represented as 0 and 1 where 0 means the hole is empty and one means there is a peg in the hole.
+    The rows of the board is represented as a tuple of tuples.
+    Example: ((0), (1, 1), (1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1, 1))
+    
+    Actions are also represented as tuples.
+    Example: ((2, 0), (0, 0))
+    (2, 0) means we want to take the peg from row 3, column 1 and place it into row 1 column 1 (represented as (0, 0)).
+    [Python uses 0-based indexing]
+    The peg at (1, 0), aka the peg in between (2, 0) and (0, 0), will be removed since it was the peg that was jumped over.
+    Resulting state after example valid action: ((1), (0, 1), (0, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1, 1))
+
+Evaluation:
+    We used both BFS and A* search. BFS was not optimal due to the number of nodes that it exapnds.
+    A* was more efficient because it relies on its heuristic to guide its decision making. Our heuristic
+    function focuses on keeping track of the number of open pegs in the game state as well as the number
+    of stranded pegs. THe more open pegs, the more optimal the score. If there are stranded pegs, then
+    the heuristic score will be worse.
+    In terms of time, BFS resulted in 13.70 seconds while A* resulted in 0.0049 seconds.
+
+References
+  1. https://github.com/aimacode/aima-python
+  2. https://www.mentalfloss.com/posts/how-to-win-cracker-barrel-peg-game
