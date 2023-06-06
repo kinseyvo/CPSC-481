@@ -1,4 +1,16 @@
 Programmed by Luke Schrezenmeier and Kinsey Vo
 
 This program uses search algorithms from "Artificial Intelligence: A Modern Approach" to solve the Wolf-Goat-Cabbage problem.
-Reference: https://github.com/aimacode/aima-python
+
+All characters in the state (Farmer [F], Goat [G], Wolf [W], Cabbage [C]) are represented in a set.
+
+The problem requires 2 sets, but we are only representing one and assuming the second set is valid.
+Example: Left side (left bank) could represent {'F', 'G'}, so the right side (right bank) would be {'W', 'C'}.
+
+The goal state is to get the left side empty { } and the right side filled with {'F', 'G', 'W', 'C'}. When moving from the
+left side to right side, only the farmer and a single item can move at a time. However, certain items cannot be left together
+while the farmer is away. If the farmer is away, the wolf would eat the goat or the goat would eat the cabbage.
+
+References:
+  1. https://github.com/aimacode/aima-python
+  2. https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem
