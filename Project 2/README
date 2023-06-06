@@ -1,11 +1,20 @@
+Programming project 2 - Game of Nim
+
 Programmed by Luke Schrezenmeier, Rich Bui, and Kinsey Vo
 
 This program uses the game algorithms from "Artificial Intelligence: A Modern Approach" to play the Game of Nim.
-Reference: https://github.com/aimacode/aima-python
 
-Video Example: https://www.youtube.com/watch?v=-aPDfqYrIcg
+Each state is represented by a list which contains the number of objects in each pile/row.
+Example: [5, 3, 1] represents 5 objects in the first row, 3 in the second and 1 in the third row
+
+An action is represented by a 2-tuple (r, n) where r represents the row number and n represents the number of objects to remove.
+Example: (1, 2) meants removing 2 objects from the row with index 1 (the second row since Python uses 0-based indexing)
 
 RULES/HOW TO PLAY:
 1) Set up game board/field by creating rows of objects
 2) Players take turns taking any number of objects from one of the piles
 3) Game ends and a player loses when they take the last object on the board/field
+
+References
+  1. https://github.com/aimacode/aima-python
+  2. https://www.youtube.com/watch?v=-aPDfqYrIcg
